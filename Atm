@@ -1,0 +1,59 @@
+copy = 4703
+count = 0
+sav = 900
+cur = 1000
+i = 0
+d = 0
+
+for i in range(1, 4, 1):
+    if d == 1:
+        break
+    a = int(input("enter the pin="))
+    if a == copy:
+        print("welcome to SBI")
+        print("1)WITHDRAWAL")
+        print("2)MINI STATEMENT")
+        print("3)BALANCE ENQUIRY")
+        print("4)PIN CHANGE")
+        print("5)EXIT")
+        while i > 0:
+            b = int(input("Enter your choice="))
+            if b == 1:
+                print("1)SAVING", "2)CURRENT")
+                c = int(input())
+                if c == 1:
+                    amt = int(input("enter the amount="))
+                    if b > sav:
+                        print("insufficient balance")
+                        i += 1
+                    else:
+                        sav = sav - amt
+                        print("success")
+                        i += 1
+                if c == 2:
+                    b = int(input("enter the amount="))
+                    if b > cur:
+                        print("insufficient balance")
+                        i += 1
+                    else:
+                        cur = cur - b
+                        print("success")
+                        i += 1
+            if b == 3:
+                print("1)SAVING", "2)CURRENT")
+                b = int(input())
+                if b == 1:
+                    print(sav)
+                    i += 1
+                else:
+                    print(cur)
+                    i += 15
+
+            if b == 5:
+                d = d + 1
+                break
+    else:
+        print('incorrect password')
+
+else:
+    print('card block')
